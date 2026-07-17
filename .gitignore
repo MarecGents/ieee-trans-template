@@ -332,3 +332,6 @@ TSWLatexianTemp*
 
 ## IDE / editor / tooling config:
 .reasonix/
+
+## Generated task logs:
+docs/
