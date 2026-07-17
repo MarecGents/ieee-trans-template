@@ -64,7 +64,29 @@ latexmk -pdf PaperTemplate.tex
 
 ---
 
-## 📚 参考文献库 (`mybib.bib`)
+## 🔧 工具与环境
+
+### 编译环境
+
+本模板依赖 **LaTeX 完整发行版**，以下两种任选其一：
+
+| 发行版 | 说明 | 下载 |
+|--------|------|------|
+| **TeX Live** ⭐ 首选推荐 | 跨平台（Windows / macOS / Linux），宏包最全，官方维护。安装包较大（约 4–7 GB），安装耗时较长。 | [texlive2026.iso](https://mirror.ctan.org/systems/texlive/Images/) |
+| **CTeX** | Windows 原生中文支持，基础版可快速上手。完整版同样安装缓慢，不同版本安装步骤有细微差异。 | [CTeX 下载页](https://ctex.org/CTeX/download/#latest) |
+
+> 💡 TeX Live 是绝大多数期刊和会议的投稿编译环境，强烈建议优先安装。
+
+### 写作与编译工具
+
+| 工具 | 适用平台 | 说明 |
+|------|----------|------|
+| **WinEdt** ⭐ | Windows | 作者首选推荐，与 IEEEtran 模板配合极佳，支持自动补全、拼写检查、DVI/PDF 预览 |
+| **VS Code** | Windows / macOS / Linux | 安装 [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) 插件。**注意：** VS Code 对 CTeX 适配较差，建议搭配 TeX Live 使用 |
+| **Overleaf** | Web (在线) | 最流行的在线协作 LaTeX 平台，无需本地安装，支持实时预览和多人协作。可直接上传本模板压缩包开始写作 |
+| **TeXstudio** | Windows / macOS / Linux | 开源 LaTeX IDE，内置公式预览、代码折叠、语法高亮，对中文支持良好 |
+| **LyX** | Windows / macOS / Linux | 所见即所得（WYSIWYM）的 LaTeX 前端，适合初学者快速上手 |
+| **TeXworks** | Windows / macOS / Linux | TeX Live 自带编辑器，轻量简洁，零配置启动 |
 
 预置了覆盖通信、信号处理、无线网络、计算机等领域的常用期刊/会议缩写：
 
