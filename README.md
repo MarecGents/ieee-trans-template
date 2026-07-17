@@ -160,8 +160,6 @@ latexmk -pdf PaperTemplate.tex
 - 导师：岳新伟 教授
 - GitHub：[@MarecGents](https://github.com/MarecGents)
 
-### 导师
-
 **岳新伟 教授** (Senior Member, IEEE)
 
 - 北京信息科技大学 信息与通信工程学院 副院长、教授
