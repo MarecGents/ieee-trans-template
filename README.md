@@ -100,6 +100,28 @@ latexmk -pdf PaperTemplate.tex
 
 ---
 
+## 🎯 兼容期刊
+
+本模板基于 **IEEEtran** 文档类，支持 **全部 IEEE 期刊与会议** 的投稿格式。切换 `journal`/`conference` 模式即可适配。以下是各领域的代表性期刊：
+
+| 领域 | 知名期刊 |
+|------|----------|
+| **通信与网络** | IEEE Trans. Commun. (TCOM), IEEE J. Sel. Areas Commun. (JSAC), IEEE Trans. Wireless Commun. (TWC), IEEE/ACM Trans. Netw. (TON), IEEE Commun. Mag. |
+| **信号处理** | IEEE Trans. Signal Process. (TSP), IEEE Signal Process. Mag. (SPM), IEEE/ACM Trans. Audio Speech Lang. Process. (TASLP) |
+| **信息论** | IEEE Trans. Inf. Theory (TIT) |
+| **计算机视觉与AI** | IEEE Trans. Pattern Anal. Mach. Intell. (TPAMI), IEEE Trans. Neural Netw. Learn. Syst. (TNNLS), IEEE Trans. Image Process. (TIP) |
+| **控制系统** | IEEE Trans. Autom. Control (TAC), IEEE/CAA J. Autom. Sin. |
+| **电力与能源** | IEEE Trans. Power Syst. (TPWRS), IEEE Trans. Smart Grid (TSG) |
+| **移动计算与IoT** | IEEE Trans. Mob. Comput. (TMC), IEEE Internet Things J. (IoT-J) |
+| **信息安全** | IEEE Trans. Inf. Forensics Security (TIFS) |
+| **综合旗舰** | Proc. IEEE, IEEE Access |
+| **教程/杂志** | IEEE Commun. Surv. Tutor. (COMST), IEEE Signal Process. Mag., IEEE Veh. Technol. Mag. |
+| **会议** | ICC, GLOBECOM, INFOCOM, ICASSP, CVPR, WCNC |
+
+> 💡 如需向 IEEE 会议投稿，取消 `PaperTemplate.tex` 第 1 行注释、注释掉第 2 行即可切换为 `conference` 模式。
+
+---
+
 ## 📄 许可证
 
 [MIT License](LICENSE) © 2026 MarecGents
