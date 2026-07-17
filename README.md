@@ -10,18 +10,19 @@
 
 ```
 ieee-trans-template/
-├── templates/                  # 论文模板目录（可扩展其他期刊）
-│   ├── PaperTemplate.tex       # 主模板文件 (IEEEtran, journal 双栏)
-│   ├── mybib.bib               # 参考文献库（预置 30+ IEEE 期刊缩写）
-│   ├── citesort.sty            # 引用排序与压缩样式
-│   ├── figure/                 # 图片资源目录
-│   └── pdf/                    # PDF 输出目录
+├── templates/                  # 论文模板目录（按期刊名分层）
+│   ├── ieee/                   # IEEE Transactions 模板
+│   │   ├── PaperTemplate.tex   # 主模板文件 (IEEEtran, journal 双栏)
+│   │   ├── mybib.bib           # 参考文献库（预置 30+ IEEE 期刊缩写）
+│   │   ├── citesort.sty        # 引用排序与压缩样式
+│   │   ├── figure/             # 图片资源目录
+│   │   └── pdf/                # PDF 输出目录
+│   ├── elsevier/               # 📌 未来扩展
+│   └── acm/                    # 📌 未来扩展
 ├── .gitignore                  # LaTeX 编译产物忽略规则
 ├── LICENSE                     # MIT License
 └── README.md                   # 本文件
 ```
-
-> 💡 **未来扩展**：如需添加其他期刊模板（如 Elsevier、ACM、Springer 等），可在 `templates/` 下按期刊名创建子目录，例如 `templates/elsevier/`、`templates/acm/`。
 
 ---
 
@@ -32,8 +33,8 @@ ieee-trans-template/
 使用标准的 `pdflatex` + `bibtex` 编译流程：
 
 ```bash
-# 1. 进入模板目录
-cd templates
+# 1. 进入对应期刊模板目录
+cd templates/ieee
 
 # 2. 编译主文档（需 2-3 次以解析交叉引用）
 pdflatex PaperTemplate.tex
@@ -45,7 +46,7 @@ pdflatex PaperTemplate.tex
 或使用 `latexmk` 一键编译（推荐）：
 
 ```bash
-cd templates
+cd templates/ieee
 latexmk -pdf PaperTemplate.tex
 ```
 
