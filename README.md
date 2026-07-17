@@ -103,3 +103,28 @@ latexmk -pdf PaperTemplate.tex
 ## 📄 许可证
 
 [MIT License](LICENSE) © 2026 MarecGents
+
+---
+
+## 👤 维护信息
+
+### 模板维护者
+
+**陶星伦（MarecGents）**
+
+- 北京信息科技大学 信息与通信工程方向 在读硕士研究生
+- 导师：岳新伟 教授
+- GitHub：[@MarecGents](https://github.com/MarecGents)
+
+### 导师
+
+**岳新伟 教授**
+
+- 北京信息科技大学 信息与通信工程学院 副院长
+- 分管学院科研工作
+- 通信工程系教师
+- 研究方向：无线通信、5G移动通信、PDMA 免调度传输等
+
+---
+
+*本模板服务于学术论文写作，欢迎使用和贡献。*
