@@ -1,0 +1,58 @@
+%\documentclass[conference]{IEEEtran}  % IEEE会议版本
+\documentclass[journal]{IEEEtran}   %% IEEE期刊双栏版本
+%\documentclass[12pt, draftclsnofoot, onecolumn]{IEEEtran} %% IEEE期刊单栏版本
+\usepackage{multirow} % 表格中多行合并单元格
+\usepackage{diagbox} % 在表格里画斜线分割单元格（常用于对比矩阵左上角）。
+\usepackage{amssymb} % 提供额外数学符号
+\usepackage{amsmath} % 最重要的数学公式包, align 对齐环境, cases, split, 更好控制公式编号 IEEE 官方也推荐使用。
+\usepackage{graphicx} % 插入图片的核心包
+\usepackage{cite} % 压缩引用 [1,2,3,4] → [1–4], IEEE 推荐使用。
+\usepackage{citesort}
+\usepackage{balance} % 平衡文章最后一页的双栏内容，使左、右栏高度接近。
+\usepackage[utf8]{inputenc} % 指定输入编码。utf8 意味着你可以直接写中文、特殊字符等。
+\usepackage{subcaption} % 用于子图 (a)(b)(c) 的排布。
+\usepackage{epstopdf} % 用于处理 EPS 图片（旧图像格式，通常在 IEEE latex 模板中出现）。
+\usepackage{comment} % 允许注释掉大段文本：
+\usepackage{url} % 格式化 URL 链接，让长网址自动换行。
+\usepackage{xcolor} % 提供颜色
+\usepackage{amsthm} % 数学定理环境，例如：\newtheorem{theorem}{Theorem}
+\usepackage{mdframed} % 绘制带边框的文字框，用于定理、高亮内容。
+%\usepackage[hidelinks]{hyperref} % 使交叉引用可点击，投稿前可以关闭颜色：\usepackage[hidelinks]{hyperref}
+\usepackage{algorithm} % 常用于伪代码
+\usepackage{algpseudocode} % 常用于伪代码
+\usepackage{bm} % 粗体数学符号，比 \mathbf 更强
+\usepackage{booktabs} % 为表格添加更美观的横线（IEEE 经常使用）。
+%\allowdisplaybreaks %这允许 align、gather 等环境在所有 \\ 处自动断行，subequations 编号也会跟着跨栏延续。
+
+\newtheorem{theorem}{Theorem} % \begin{theorem} xxx \end{theorem}
+\newtheorem{lemma}{Lemma} % \begin{lemma} xxx \end{lemma}
+\newtheorem{corollary}{Corollary} % \begin{corollary} xxx \end{corollary}
+\newtheorem{remark}{Remark} % \begin{remark} xxx \end{remark}
+\newtheorem{proposition}{Proposition} % \begin{proposition} xxx \end{proposition}
+
+%\numberwithin{equation}{section} % 用于分章节编号（IEEE 推荐）。
+%\numberwithin{theorem}{section} % 用于分章节编号（IEEE 推荐）。
+
+\begin{document}
+\title{\Huge{Title abcd}}
+
+\author{Author Name,~\IEEEmembership{Member,~IEEE}
+\thanks{The authors are with XXX University. Email: xxx@yyy.com.}
+}
+    
+\maketitle
+
+\begin{abstract}
+abstract
+\end{abstract}
+\begin{IEEEkeywords}
+a,b,c,d
+\end{IEEEkeywords}
+
+\section{Introduction}
+\IEEEPARstart{W}{elcome} to \cite{initcite}
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{mybib}
+\end{document} 
