@@ -81,12 +81,12 @@ latexmk -pdf PaperTemplate.tex
 
 | 工具 | 适用平台 | 说明 |
 |------|----------|------|
-| **WinEdt** ⭐ | Windows | 作者首选推荐，与 IEEEtran 模板配合极佳，支持自动补全、拼写检查、DVI/PDF 预览 |
-| **VS Code** | Windows / macOS / Linux | 安装 [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) 插件。**注意：** VS Code 对 CTeX 适配较差，建议搭配 TeX Live 使用 |
-| **Overleaf** | Web (在线) | 最流行的在线协作 LaTeX 平台，无需本地安装，支持实时预览和多人协作。可直接上传本模板压缩包开始写作 |
-| **TeXstudio** | Windows / macOS / Linux | 开源 LaTeX IDE，内置公式预览、代码折叠、语法高亮，对中文支持良好 |
-| **LyX** | Windows / macOS / Linux | 所见即所得（WYSIWYM）的 LaTeX 前端，适合初学者快速上手 |
-| **TeXworks** | Windows / macOS / Linux | TeX Live 自带编辑器，轻量简洁，零配置启动 |
+| **WinEdt** ⭐ | Windows | 作者首选推荐，与 IEEEtran 模板配合极佳，支持自动补全、拼写检查、DVI/PDF 预览。[下载地址](https://www.winedt.com/download.html) |
+| **VS Code** | Windows / macOS / Linux | 免费开源的跨平台编辑器，安装 [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) 插件后即可编译 LaTeX。[下载地址](https://code.visualstudio.com/)。**注意：** VS Code 对 CTeX 适配较差，建议搭配 TeX Live 使用 |
+| **Overleaf** | Web (在线) | 最流行的在线协作 LaTeX 平台，无需本地安装，支持实时预览和多人协作。[官网链接](https://www.overleaf.com/)。可直接上传本模板压缩包开始写作 |
+| **TeXstudio** | Windows / macOS / Linux | 开源 LaTeX IDE，内置公式预览、代码折叠、语法高亮，对中文支持良好。[下载地址](https://www.texstudio.org/) |
+| **LyX** | Windows / macOS / Linux | 所见即所得（WYSIWYM）的 LaTeX 前端，适合初学者快速上手。[下载地址](https://www.lyx.org/Download) |
+| **TeXworks** | Windows / macOS / Linux | TeX Live 自带编辑器，轻量简洁，零配置启动。[项目主页](https://tug.org/texworks/) |
 
 预置了覆盖通信、信号处理、无线网络、计算机等领域的常用期刊/会议缩写：
 
