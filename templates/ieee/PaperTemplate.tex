@@ -24,6 +24,11 @@
 \usepackage{booktabs} % 为表格添加更美观的横线（IEEE 经常使用）。
 %\allowdisplaybreaks %这允许 align、gather 等环境在所有 \\ 处自动断行，subequations 编号也会跟着跨栏延续。
 
+% 定义“删除”标记：红色（如果以后想加删除线，在这里加 \sout 即可）
+\newcommand{\textdelet}[1]{\textcolor{red}{#1}}  %使用方法 xxxx(删除文本前面的内容)...\textdelete{aaaa}...xxxx(删除文本之后的内容)
+% 定义“新增”标记：蓝色（或者绿色，看你喜好）
+\newcommand{\textadd}[1]{\textcolor{blue}{#1}} %使用方法 xxxx(添加文本位置前面的内容)...\textdelete{bbbb}...xxxx(添加文本位置之后的内容)
+
 \newtheorem{theorem}{Theorem} % \begin{theorem} xxx \end{theorem}
 \newtheorem{lemma}{Lemma} % \begin{lemma} xxx \end{lemma}
 \newtheorem{corollary}{Corollary} % \begin{corollary} xxx \end{corollary}
