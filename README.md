@@ -1,8 +1,15 @@
 # IEEE Trans Template
 
-> A LaTeX Template for IEEE Transactions
+> LaTeX templates for IEEE Transactions and Chinese core journals
 
-一篇开箱即用的 IEEE 期刊论文 LaTeX 模板，适合作为通信、信号处理、计算机等工程领域论文写作的起点。
+本仓库提供两套开箱即用的 LaTeX 模板，适合通信、信号处理、计算机等工程领域的论文写作：
+
+| 模板目录 | 适用场景 | 版式 | 推荐编译器 |
+|----------|----------|------|------------|
+| `templates/ieee/` | IEEE 期刊 / 会议投稿 | journal 双栏（可切换 conference / onecolumn） | pdfLaTeX |
+| `templates/chinese-core/` | 中文核心期刊写作与 PDF 稿 | 单栏投稿稿 + 双栏定稿 | XeLaTeX |
+
+两套模板均包含完整的模板源码、编译产物 PDF 与参考文献库；IEEE 模板的使用说明见本文件，中文模板另附独立的 [使用说明](templates/chinese-core/README.md)。
 
 ---
 
@@ -13,10 +20,18 @@ ieee-trans-template/
 ├── templates/                  # 论文模板目录（按期刊名分层）
 │   ├── ieee/                   # IEEE Transactions 模板
 │   │   ├── PaperTemplate.tex   # 主模板文件 (IEEEtran, journal 双栏)
+│   │   ├── PaperTemplate.pdf   # 编译产物
 │   │   ├── mybib.bib           # 参考文献库（预置 30+ IEEE 期刊缩写）
-│   │   ├── citesort.sty        # 引用排序与压缩样式
-│   │   ├── figure/             # 图片资源目录
-│   │   └── pdf/                # PDF 输出目录
+│   │   └── citesort.sty        # 引用排序与压缩样式
+│   ├── chinese-core/           # 中文核心期刊模板（ctexart + XeLaTeX）
+│   │   ├── PaperTemplate.tex   # 单栏模板（投稿稿）
+│   │   ├── PaperTemplate.pdf   # 单栏模板编译产物
+│   │   ├── PaperTemplate-twocol.tex  # 双栏模板（首页通栏 + 正文两栏）
+│   │   ├── PaperTemplate-twocol.pdf  # 双栏模板编译产物
+│   │   ├── mybib.bib           # 参考文献库（GB/T 7714，中英文示例）
+│   │   ├── citesort.sty        # 从 ieee 复制（本模板未加载，原因见其 README）
+│   │   ├── figure/             # 示例图片目录（含 EPS 示例 fig_eps_demo.eps）
+│   │   └── README.md           # 中文模板使用说明（含 EPS / 双栏说明）
 │   ├── elsevier/               # 📌 未来扩展
 │   └── acm/                    # 📌 未来扩展
 ├── .gitignore                  # LaTeX 编译产物忽略规则
@@ -28,7 +43,7 @@ ieee-trans-template/
 
 ## 🚀 快速开始
 
-### 编译模板
+### 编译 IEEE 模板（`templates/ieee/`）
 
 使用标准的 `pdflatex` + `bibtex` 编译流程：
 
@@ -49,6 +64,23 @@ pdflatex PaperTemplate.tex
 cd templates/ieee
 latexmk -pdf PaperTemplate.tex
 ```
+
+### 编译中文模板（推荐 XeLaTeX）
+
+中文模板位于 `templates/chinese-core/`，按 `ctexart` + `fontspec`/`xeCJK` 方案设计，**推荐使用 XeLaTeX**（`pdflatex` 虽可经 CTeX 的 CJK 回退编译，但字体、标点与版式不保证一致）。提供单栏投稿稿与双栏定稿两套模板：
+
+```bash
+cd templates/chinese-core
+latexmk -xelatex PaperTemplate.tex          # 单栏版（推荐）
+latexmk -xelatex PaperTemplate-twocol.tex   # 双栏版
+# 或手动四步（单栏版）：
+# xelatex PaperTemplate.tex
+# bibtex  PaperTemplate
+# xelatex PaperTemplate.tex
+# xelatex PaperTemplate.tex
+```
+
+两版共用 `mybib.bib` 与 `figure/`，`.aux`、`.bbl` 等中间文件相互独立。中文模板的字体、版式、EPS 图片支持与双栏说明详见 [中文模板 README](templates/chinese-core/README.md)。
 
 ### 切换文档模式
 
@@ -106,9 +138,9 @@ latexmk -pdf PaperTemplate.tex
 
 ---
 
-## 📦 已加载的 LaTeX 包
+## 📦 已加载的 LaTeX 包（`templates/ieee/`）
 
-模板预载了以下常用包，覆盖论文写作的主要需求：
+IEEE 模板预载了以下常用包，覆盖论文写作的主要需求；中文模板的宏包清单见 [中文模板 README](templates/chinese-core/README.md)：
 
 | 类别 | 包 |
 |------|-----|
@@ -122,9 +154,28 @@ latexmk -pdf PaperTemplate.tex
 
 ---
 
-## 🎯 兼容期刊
+## 🇨🇳 中文期刊模板（chinese-core）
 
-本模板基于 **IEEEtran** 文档类，支持 **全部 IEEE 期刊与会议** 的投稿格式。切换 `journal`/`conference` 模式即可适配。以下是各领域的代表性期刊：
+`templates/chinese-core/` 面向中文核心期刊（通信 / 电子信息）的写作与排版，基于 `ctexart` + **XeLaTeX**，与 IEEE 模板并列使用。提供单栏投稿稿与双栏定稿两套模板，并支持 PNG / JPG / PDF / EPS 图片；EPS 转换依赖 Ghostscript（TeX Live 自带）。详见 [中文模板 README](templates/chinese-core/README.md)。
+
+| 项目 | 说明 |
+|------|------|
+| 版式 | `PaperTemplate.tex`：A4 单栏投稿稿；`PaperTemplate-twocol.tex`：A4 双栏定稿（首页信息通栏、正文两栏） |
+| 首页信息 | 中英文题目 / 作者 / 单位 / 摘要 / 关键词、中图分类号、文献标志码、基金项目、作者简介 |
+| 标题层级 | 一级黑体四号、二级黑体小四、三级黑体五号 |
+| 图表 | 图题在下、表题在上（五号黑体）；三线表、`multirow`、`diagbox`、`subcaption` 子图；双栏版表格按栏宽缩放 |
+| 图片格式 | PNG / JPG / PDF / EPS（EPS 需 Ghostscript；XeLaTeX 与 pdfLaTeX 均可） |
+| 参考文献 | GB/T 7714 顺序编码制（`gbt7714` + BibTeX），中文条目需 `language = {zh}` |
+| 复用 IEEE 宏包 | `amsmath`、`amssymb`、`bm`、`graphicx`、`subcaption`、`multirow`、`booktabs`、`diagbox`、`algorithm`、`algpseudocode`、`amsthm`、`mdframed`、`xcolor`、`comment`、`url` |
+| 其他 | `\textdelet`（红）/ `\textadd`（蓝）修订标记、中文定理/引理/推论/注/命题环境、中文算法伪代码、`hyperref` 无边框交叉引用（`hidelinks`）、双栏/单栏两套模板 |
+
+⚠️ **投稿方式提醒（重要）**：中文核心期刊多数要求按本刊 Word 模板撰写 / 上传 docx，LaTeX 通常不是官方投稿格式；是否接受 LaTeX、需要哪些文件类型、参考文献与版式细节，**均以目标期刊官方投稿指南为准**。本模板用于写作与生成 PDF 稿，请按目标期刊要求准备投稿材料。
+
+---
+
+## 🎯 兼容期刊（`templates/ieee/`）
+
+IEEE 模板基于 **IEEEtran** 文档类，支持 **全部 IEEE 期刊与会议** 的投稿格式。切换 `journal`/`conference` 模式即可适配。以下是各领域的代表性期刊：
 
 | 领域 | 知名期刊 |
 |------|----------|

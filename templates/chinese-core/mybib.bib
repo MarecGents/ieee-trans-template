@@ -1,0 +1,159 @@
+% =============================================================================
+%  mybib.bib —— 中文期刊论文模板示例参考文献库（GB/T 7714 顺序编码制）
+% -----------------------------------------------------------------------------
+%  说明：
+%   1. 中文条目必须加 `language = {zh}`，gbt7714-numerical.bst 据此把
+%      “and / et al / 标点” 切换为中文格式（如“等”“，”）；
+%   2. 英文条目不要加 language 字段（默认当作英文处理）；
+%   3. 作者之间用 `and` 分隔；中文作者名直接写汉字；
+%   4. 期刊名可使用文件开头的字符串缩写（以 at 符号定义），也可直接写全称。
+%   5. 本文件中的条目仅用于演示 GB/T 7714 排版格式（部分文献信息为虚构），
+%      请勿直接作为真实文献引用；投稿前请替换为本人核对过的真实文献。
+%  参考：GB/T 7714—2015《信息与文献 参考文献著录规则》
+% =============================================================================
+
+@STRING{IEEE_J_TWC   = "{IEEE} Trans. Wireless Commun."}
+@STRING{IEEE_J_JSAC  = "{IEEE} J. Sel. Areas Commun."}
+@STRING{IEEE_J_COMST = "{IEEE} Commun. Surveys Tutorials"}
+@STRING{IEEE_J_TCOM  = "{IEEE} Trans. Commun."}
+@STRING{IEEE_C_ICC   = "{IEEE} Int. Conf. Commun. (ICC)"}
+
+% ---------------------------- 中文期刊论文 ----------------------------------
+@article{zhang2020noma,
+  author  = {张伟 and 李明},
+  title   = {非正交多址接入技术研究综述},
+  journal = {通信学报},
+  year    = {2020},
+  volume  = {41},
+  number  = {6},
+  pages   = {1--12},
+  language = {zh}
+}
+
+@article{liu2021ris,
+  author  = {刘洋 and 陈静 and 王磊},
+  title   = {智能反射面辅助无线通信系统研究进展},
+  journal = {电子学报},
+  year    = {2021},
+  volume  = {49},
+  number  = {8},
+  pages   = {1601--1612},
+  language = {zh}
+}
+
+@article{wang2022near,
+  author  = {王磊 and 张敏},
+  title   = {近场通信中的波束成形与性能分析},
+  journal = {通信学报},
+  year    = {2022},
+  volume  = {43},
+  number  = {3},
+  pages   = {55--66},
+  language = {zh}
+}
+
+@article{zhao2023resource,
+  author  = {赵强 and 孙浩 and 周琳 and 吴迪},
+  title   = {面向6G的无线资源分配方法研究},
+  journal = {电子与信息学报},
+  year    = {2023},
+  volume  = {45},
+  number  = {2},
+  pages   = {400--410},
+  language = {zh}
+}
+
+% ---------------------------- 中文学位论文 ----------------------------------
+@phdthesis{chen2019thesis,
+  author  = {陈晨},
+  title   = {大规模MIMO系统中的信道估计与预编码研究},
+  school  = {北京邮电大学},
+  address = {北京},
+  year    = {2019},
+  language = {zh}
+}
+
+% ---------------------------- 中文会议论文 ----------------------------------
+@inproceedings{sun2022conf,
+  author    = {孙浩 and 周琳},
+  title     = {基于深度学习的时变信道预测方法},
+  booktitle = {2022年全国通信理论与技术学术会议论文集},
+  address   = {北京},
+  publisher = {中国通信学会},
+  year      = {2022},
+  pages     = {123--128},
+  language  = {zh}
+}
+
+% ---------------------------- 中文标准 --------------------------------------
+@standard{gb18030,
+  author    = {全国信息技术标准化技术委员会},
+  title     = {信息技术 中文编码字符集},
+  number    = {GB 18030--2022},
+  address   = {北京},
+  publisher = {中国标准出版社},
+  year      = {2022},
+  language  = {zh}
+}
+
+% ---------------------------- 英文 IEEE 期刊论文 ---------------------------
+@article{li2020deep,
+  author  = {Li, Xiaohua and Zhang, Jun and Wang, Peng},
+  title   = {Deep Learning for Channel Estimation in Massive {MIMO} Systems},
+  journal = IEEE_J_TWC,
+  year    = {2020},
+  volume  = {19},
+  number  = {5},
+  pages   = {3210--3224}
+}
+
+@article{smith2021survey,
+  author  = {Smith, John A. and Brown, Kevin},
+  title   = {A Survey of Reconfigurable Intelligent Surfaces for {6G} Wireless Networks},
+  journal = IEEE_J_COMST,
+  year    = {2021},
+  volume  = {23},
+  number  = {4},
+  pages   = {2100--2145}
+}
+
+@article{kim2022beam,
+  author  = {Kim, Hyun and Park, Seung and Lee, Jae},
+  title   = {Beamforming Design for Near-Field Communications with Large Antenna Arrays},
+  journal = IEEE_J_JSAC,
+  year    = {2022},
+  volume  = {40},
+  number  = {10},
+  pages   = {2901--2915}
+}
+
+% ---------------------------- 英文会议论文 ----------------------------------
+@inproceedings{rao2019conf,
+  author    = {Rao, Ming and Chen, Tao},
+  title     = {Performance Analysis of {NOMA} with Imperfect {CSI}},
+  booktitle = IEEE_C_ICC,
+  address   = {Shanghai, China},
+  publisher = {IEEE},
+  year      = {2019},
+  pages     = {1--6}
+}
+
+% ---------------------------- 英文标准 --------------------------------------
+@standard{ieee80211,
+  author    = {{IEEE}},
+  title     = {{IEEE} Standard for Information Technology---Telecommunications and Information Exchange between Systems---Local and Metropolitan Area Networks---Specific Requirements---Part 11: Wireless {LAN} Medium Access Control ({MAC}) and Physical Layer ({PHY}) Specifications},
+  number    = {IEEE Std 802.11-2020},
+  address   = {New York, NY, USA},
+  publisher = {IEEE},
+  year      = {2021}
+}
+
+% ---------------------------- 英文专著 --------------------------------------
+@book{rappaport2002book,
+  author    = {Rappaport, Theodore S.},
+  title     = {Wireless Communications: Principles and Practice},
+  edition   = {2},
+  address   = {Upper Saddle River, NJ, USA},
+  publisher = {Prentice Hall},
+  year      = {2002}
+}
